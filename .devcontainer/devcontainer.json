@@ -10,12 +10,23 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "workbench.activityBar.visible": true,
-        "workbench.sideBar.location": "left",
-        "workbench.startupEditor": "none"
+        // Hides the Explorer sidebar at startup
+        "workbench.sideBar.location": "hidden",
+
+        // Activity bar is optional; set to true if you want icons
+        "workbench.activityBar.visible": false,
+
+        // Prevent VS Code welcome tab from appearing
+        "workbench.startupEditor": "none",
+
+        // Make sure terminal stays visible & default to editor area
+        "terminal.integrated.defaultLocation": "editor",
+        "terminal.integrated.defaultProfile.linux": "bash"
       }
     }
   },
 
+  // Auto-open your instructions file
   "postCreateCommand": "code welcome.md"
 }
+
